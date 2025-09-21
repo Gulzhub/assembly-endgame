@@ -1,6 +1,7 @@
 # Assembly Endgame
 
-![Assembly Endgame Screenshot](https://via.placeholder.com/800x400?text=Game+Screenshot) <!-- Replace with actual screenshot URL -->
+![Assembly Endgame Screenshot](<img width="668" height="812" alt="image" src="https://github.com/user-attachments/assets/00e077a1-6926-434d-9be9-bb0e91de83bc" />
+) <!-- Replace with actual screenshot URL -->
 
 A programming-themed word guessing game inspired by Wordle. Save your favorite languages from the clutches of Assembly by guessing the secret word before it's too late!
 
