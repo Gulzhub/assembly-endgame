@@ -7,7 +7,6 @@ A programming-themed word guessing game inspired by Wordle. Save your favorite l
 ## Demo
 
 Play the game here: [https://assembly-endgame-demo.vercel.app/](https://gulzhub.github.io/assembly-endgame/)  
-*(This is a dummy link; replace with your actual deployment URL once hosted.)*
 
 ## Description
 
@@ -29,11 +28,7 @@ The game features dynamic visual feedback, farewell messages for fallen language
 
 - **Frontend Framework**: React (with hooks like `useState` for managing game state).
 - **Styling**: Pure CSS with a modern reset (box-sizing, font-smoothing, etc.), Flexbox for layout, transitions for animations, and pseudo-elements for overlays (e.g., skull on lost languages).
-- **Utilities**:
-  - `clsx`: For conditional class names (e.g., correct/wrong/disabled buttons).
-  - Custom utils: `getFarewellText` for dynamic messages, `getRandomWords` for word selection.
-- **Data**: `languages` array with color-coded styles for each language.
-- **Build/Deployment**: Assumes Vite or Create React App; deployable to Vercel/Netlify.
+
 
 No backend required – fully client-side!
 
