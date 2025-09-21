@@ -6,7 +6,7 @@ A programming-themed word guessing game inspired by Wordle. Save your favorite l
 
 ## Demo
 
-Play the game here: [https://assembly-endgame-demo.vercel.app/](https://assembly-endgame-demo.vercel.app/)  
+Play the game here: [https://assembly-endgame-demo.vercel.app/](https://gulzhub.github.io/assembly-endgame/)  
 *(This is a dummy link; replace with your actual deployment URL once hosted.)*
 
 ## Description
