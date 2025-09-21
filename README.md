@@ -1,12 +1,70 @@
-# React + Vite
+# Assembly Endgame
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Assembly Endgame Screenshot](https://via.placeholder.com/800x400?text=Game+Screenshot) <!-- Replace with actual screenshot URL -->
 
-Currently, two official plugins are available:
+A programming-themed word guessing game inspired by Wordle. Save your favorite languages from the clutches of Assembly by guessing the secret word before it's too late!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
+Play the game here: [https://assembly-endgame-demo.vercel.app/](https://assembly-endgame-demo.vercel.app/)  
+*(This is a dummy link; replace with your actual deployment URL once hosted.)*
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Description
+
+In **Assembly Endgame**, you have up to 8 wrong guesses to figure out the hidden programming-related word (3-6 letters). Each incorrect guess "eliminates" a programming language from the ecosystem, overlaying it with a skull emoji and a dark fade effect. If you run out of guesses, Assembly takes over the world! Win by revealing the full word, or lose and face the low-level reality.
+
+The game features dynamic visual feedback, farewell messages for fallen languages, and a mix of humor and tension for developers.
+
+## How to Play
+
+1. **Guess Letters**: Click keyboard buttons to guess letters in the hidden word.
+2. **Feedback**:
+   - Correct guesses reveal letters in the word.
+   - Wrong guesses eliminate a language (with a skull overlay) and show a farewell message.
+3. **Win Condition**: Reveal the entire word before 8 wrong guesses.
+4. **Lose Condition**: 8 wrong guesses, and Assembly wins – revealing missed letters in red.
+5. **New Game**: Reset with a random word after winning or losing.
+
+## Tech Stack
+
+- **Frontend Framework**: React (with hooks like `useState` for managing game state).
+- **Styling**: Pure CSS with a modern reset (box-sizing, font-smoothing, etc.), Flexbox for layout, transitions for animations, and pseudo-elements for overlays (e.g., skull on lost languages).
+- **Utilities**:
+  - `clsx`: For conditional class names (e.g., correct/wrong/disabled buttons).
+  - Custom utils: `getFarewellText` for dynamic messages, `getRandomWords` for word selection.
+- **Data**: `languages` array with color-coded styles for each language.
+- **Build/Deployment**: Assumes Vite or Create React App; deployable to Vercel/Netlify.
+
+No backend required – fully client-side!
+
+## Installation
+
+1. Clone the repo:
+   ```
+   git clone https://your-repo-url/assembly-endgame.git
+   ```
+2. Install dependencies:
+   ```
+   cd assembly-endgame
+   npm install
+   ```
+3. Run locally:
+   ```
+   npm run dev
+   ```
+4. Build for production:
+   ```
+   npm run build
+   ```
+
+## Contributing
+
+Feel free to fork and submit PRs! Ideas: Add more words/languages, improve animations, or integrate sharing features.
+
+## License
+
+MIT License – free to use and modify.
+
+---
+
+Built with ❤️ for the dev community. If Assembly wins, at least we'll have efficient code! 😄
