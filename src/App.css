@@ -1,0 +1,286 @@
+/* CSS RESET */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* APP STYLES */
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #f9f4da;
+  background-color: #282726;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 1rem;
+  height: 100vh;
+}
+
+main {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+header {
+  margin-bottom: 1.25rem;
+}
+
+header p {
+  color: #8e8e8e;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+header,
+section.game-status {
+  max-width: 350px;
+}
+
+section.game-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px dashed #323232;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 60px;
+  margin-bottom: 2.25rem;
+}
+
+section.game-status.farewellSection {
+  background: #7a5ea7;
+}
+
+section.game-status.won {
+  background-color: #10a95b;
+}
+section.game-status.lost {
+  background-color: #ba2a2a;
+}
+
+section.game-status p.farewell {
+  font-style: italic;
+}
+
+section.game-status h2 {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+section.languages {
+  max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  justify-content: center;
+  margin-bottom: 2.25rem;
+}
+
+section.languages p {
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+section.languages p.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+section.word {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 3rem;
+}
+
+section.word span {
+  padding: 6px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  background: #323232;
+  border-bottom: 1px solid #f9f4da;
+}
+
+section.word span.missed-letter {
+  color: #ec5d49;
+}
+
+section.keyboard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 480px; /* to be changed for mobile view*/
+  gap: 6px;
+  margin-bottom: 2.25rem;
+}
+
+section.keyboard button {
+  padding: 6px;
+  width: 40px;
+  height: 40px;
+  background: #fcba29;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+section.keyboard button.correct,
+section.keyboard button.correct:hover {
+  background-color: #10a95b;
+  color: #1e1e1e;
+  cursor: not-allowed;
+}
+section.keyboard button.wrong,
+section.keyboard button.wrong:hover {
+  background-color: #ec5d49;
+  color: #1e1e1e;
+  cursor: not-allowed;
+}
+
+section.keyboard button:hover {
+  background: #f7a600;
+  color: #ffffff;
+}
+
+section.keyboard button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+button.new-game {
+  padding: 6px 4rem;
+
+  background: #11b5e5;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+
+button.new-game:hover {
+  background: #0e9acb;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    padding-top: 0;
+  }
+
+  section.game-status,
+  section.languages,
+  section.word,
+  section.keyboard {
+    margin-bottom: 1.5rem;
+  }
+
+  section.game-status {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 0;
+  }
+}
